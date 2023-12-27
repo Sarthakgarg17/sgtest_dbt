@@ -34,5 +34,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   sg_dbt_project:
     # Config indicated by + and applies to all files under models/example/
-    example:
+    delta:
       +materialized: view
+      +schema: delta
+
+    consumption:
+      +materialized: view
+      +schema: consumption
