@@ -1,4 +1,5 @@
 
+
 {{ config(materialized='table' , alias="load_data") }}
 
 
