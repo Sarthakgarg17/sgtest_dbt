@@ -1,8 +1,9 @@
 {{ config(materialized='table') }}
 
 
-with data as(
+with data_final as(
 select * from {{ref('alter_data')}}
-where SRN!=2
 )
-select * from data 
+
+select * from data_final
+where SRN!=2

@@ -3,7 +3,6 @@ version: 2
 models:
   - name: load_data
     description: "A starter dbt model"
-
     columns:
       - name: CUST_ID
         description: This is a unique identifier for a customer
@@ -13,7 +12,6 @@ models:
 
   - name: alter_data
     description: "A starter dbt model"
-
     columns:
       - name: CUST_ID
         description: This is a unique identifier for a customer
@@ -23,7 +21,6 @@ models:
 
   - name: delete_data
     description: "A starter dbt model"
-
     columns:
       - name: CUST_ID
         description: This is a unique identifier for a customer
@@ -34,12 +31,23 @@ models:
         
   - name: final_data
     description: "A starter dbt model"
-
     columns:
       - name: CUST_ID
         description: This is a unique identifier for a customer
         tests:
           - unique
           - not_null
+
+
+
+
+sources:
+  - name: data
+    database: dbt_db 
+    schema: raw 
+    tables:
+      - name: RAW_DATA
+      
+
     
           
