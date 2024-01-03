@@ -1,5 +1,5 @@
 
-{{ config(materialized='table' ) }}
+{{ config(materialized='table', unique_key="CUST_ID" ) }}
 
 
 
